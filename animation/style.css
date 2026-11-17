@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.tasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(47, 0, 255);
+    border: white 2px solid;
+    transition: transform 0.3s ease;
+     justify-content: center;
+    align-items: center;
+    font: 12px Arial;
+}
+
+.translate-square, .scale-square, .rotate-square, .skew-square {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(47, 0, 255);
+    border: white 2px solid;
+    transition: transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    font: 12px Arial;
+}
+
+.translate-square:hover {
+    transform: translate(50px, -50px);
+}
+
+.scale-square:hover {
+    transform: scale(1.5);
+}
+
+.rotate-square {
+    transition: transform 0.3s ease;
+}
+
+.rotate-square:hover {
+    transform: rotate(45deg);
+}
+
+.skew-square:hover {
+    transform: skew(20deg, 20deg);
+}
+
+.button,.animated-button {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 195, 255);
+    border: white 2px solid;
+    border-radius: 5%;
+    font: 12px Arial;
+}
+
+.button{
+transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.animated-button:hover {
+    transform: scale(1.02);
+    background-color: rgb(0, 255, 195);
+    box-shadow: 0px 0px 10px rgb(0, 255, 195);
+}
+
+.progress {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(0, 255, 21);
+    border: rgb(0, 132, 255) 1px solid;
+    transition: transform 0.6s ease-in-out;
+    transform-origin: left;
+    transform: scaleX(0.1);
+}
+.progress:hover {
+    transform: scaleX(1);
+}
+
+@keyframes bounce {
+    0%,50%,100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-100px);
+    }
+    75% {
+        transform: translateY(-50px);
+    }
+}
+
+.bouncing-ball {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    position: relative;
+    animation: bounce 2s infinite;
+} 
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+      
+}
+
+.pulse {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+    margin: 20px auto;
+} 
